@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 
 // Rutas
 import { APP_ROUTING } from './app.routes';
+import { GoogleformComponent } from './components/googleform/googleform.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { APP_ROUTING } from './app.routes';
     BodyComponent,
     FooterComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    GoogleformComponent
   ],
   imports: [
     BrowserModule,
