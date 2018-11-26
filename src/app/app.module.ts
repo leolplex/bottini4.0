@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 
 // Rutas
 import { APP_ROUTING } from './app.routes';
+import { GoogleformComponent } from './components/googleform/googleform.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,13 @@ import { APP_ROUTING } from './app.routes';
     BodyComponent,
     FooterComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    GoogleformComponent
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
